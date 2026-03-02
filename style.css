@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 
 /* Mobile-first small navigation + hamburger (overrides for small screens) */
 .nav-toggle {
@@ -173,7 +178,8 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    width: fit-content;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     animation: slideDownFade 0.8s ease-out;
 }
