@@ -1,4 +1,25 @@
-// Simple accessible navigation toggle for mobile
+let deferredInstallPrompt = null;
+
+// Capture the PWA install prompt and show custom banner
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) {
+    banner.hidden = false;
+  }
+});
+
+window.addEventListener('appinstalled', () => {
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) {
+    banner.hidden = true;
+  }
+  deferredInstallPrompt = null;
+});
+
+// Simple accessible navigation toggle for mobile and PWA banner actions
 document.addEventListener('DOMContentLoaded', function () {
   const toggles = document.querySelectorAll('.nav-toggle');
 
@@ -40,4 +61,41 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // PWA install banner buttons
+  const installBtn = document.getElementById('pwaInstallBtn');
+  const dismissBtn = document.getElementById('pwaDismissBtn');
+  const banner = document.getElementById('pwaInstallBanner');
+
+  if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+      if (!deferredInstallPrompt) return;
+
+      deferredInstallPrompt.prompt();
+      try {
+        await deferredInstallPrompt.userChoice;
+      } catch (e) {
+        // ignore
+      }
+      deferredInstallPrompt = null;
+      if (banner) {
+        banner.hidden = true;
+      }
+    });
+  }
+
+  if (dismissBtn && banner) {
+    dismissBtn.addEventListener('click', () => {
+      banner.hidden = true;
+    });
+  }
 });
+
+// Register service worker for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {
+      // ignore registration errors for now
+    });
+  });
+}

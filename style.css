@@ -160,6 +160,58 @@ body {
     padding: 20px 15px;
 }
 
+.pwa-install-banner {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.96);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+    backdrop-filter: blur(12px);
+}
+
+.pwa-install-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.pwa-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pwa-btn-primary,
+.pwa-btn-secondary {
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 6px 14px;
+}
+
+.pwa-btn-primary {
+    background: linear-gradient(135deg, #7af0c4, #4f9aff);
+    color: #021124;
+    font-weight: 700;
+}
+
+.pwa-btn-secondary {
+    background: transparent;
+    color: #9ca3af;
+}
+
+.pwa-btn-secondary:hover {
+    color: #e5e7eb;
+}
+
 @media (min-width: 769px) {
     body {
         padding-top: 40px;
