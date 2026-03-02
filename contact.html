@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="profile-section">
+            <img src="assest/IMG_20250817_150931.jpg" alt="Profile Picture" class="profile-avatar">
+            <div class="profile-info">
+                <h3 class="profile-name">Krish Bansal</h3>
+                <p class="profile-title">Software Engineer</p>
+            </div>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-menu" id="primary-navigation">
+            <li><a href="Index.html" class="nav-link">Home</a></li>
+            <li><a href="project.html" class="nav-link">Projects</a></li>
+            <li><a href="skill.html" class="nav-link">Skills</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+      <section class="contact-hero" id="contact">
+        <div class="contact-hero-bg" aria-hidden="true"></div>
+        <h1 class="contact-title">Let’s Build Something Great Together.</h1>
+        <p class="contact-subtitle">Have a project, opportunity, or idea? Let’s connect.</p>
+      </section>
+      <section class="contact-section">
+        <div class="contact-grid">
+          <!-- Left: main contact form -->
+          <div class="contact-card">
+            <form action="https://formspree.io/f/xjgeznrw" method="post" class="contact-form" id="contactForm" novalidate>
+              <div class="form-field">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+              </div>
+              <div class="form-field">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+              </div>
+              <div class="form-field">
+                <label for="subject">Subject *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select subject…</option>
+                  <option value="job">Job Opportunity</option>
+                  <option value="freelance">Freelance Project</option>
+                  <option value="collab">Collaboration</option>
+                  <option value="consult">Consultation / Mentorship</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Write your message"></textarea>
+              </div>
+              <!-- Hidden field used to control email subject in Formspree -->
+              <input type="hidden" id="emailSubject" name="_subject" value="New message from portfolio site">
+              <button type="submit" class="contact-submit">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Right: quick contact info / highlights -->
+          <aside class="contact-info">
+            <h2 class="contact-info-title">Quick Connect</h2>
+            <ul class="contact-info-list">
+              <li><strong>Email:</strong> krrishbansal04@gmail.com</li>
+              <li><strong>WhatsApp:</strong> +91 88690 65502</li>
+              <li><strong>Location:</strong> India (IST)</li>
+            </ul>
+
+            <div class="contact-quick">
+              <ul class="contact-quick-list">
+                <li>Discuss a job opportunity</li>
+                <li>Plan a freelance web project</li>
+                <li>Technical collaboration or partnership</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-cta-wrap">
+          <a class="resume-button" href="https://drive.google.com/uc?export=download&id=1hVIDTPlgxNHlsNpssG9507OqgZyZgRPg" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </div>
+        <div class="footer-meta">
+          <div class="footer-socials">
+            <a class="social-icon" href="https://github.com/KrishBansalgit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.94 3.29 9.12 7.86 10.59.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.02 11.02 0 0 1 2.9-.39c.99 0 1.99.13 2.92.39 2.2-1.5 3.17-1.18 3.17-1.18.63 1.57.24 2.73.12 3.02.74.81 1.19 1.84 1.19 3.1 0 4.42-2.71 5.39-5.29 5.67.41.35.78 1.04.78 2.09 0 1.51-.01 2.73-.01 3.1 0 .31.21.68.8.56C19.96 20.87 23.25 16.69 23.25 11.75 23.25 5.48 18.27.5 12 .5z"/>
+              </svg>
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/in/krish-bansal-404711309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"></rect>
+                <path d="M6 9.5V18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="6" cy="6.5" r="1" fill="currentColor" />
+                <path d="M11 12.5v5.5M11 8.5c0 0 0-1.5 2-1.5s2 1.5 2 1.5v-.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Krish Bansal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    .about-hero { max-width:1100px; margin:40px auto; display:flex; gap:28px; align-items:center; padding:28px; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); }
+    .about-photo { width:220px; height:220px; object-fit:cover; border-radius:14px; box-shadow:0 18px 48px rgba(0,0,0,0.6); flex-shrink:0; transition:transform .28s cubic-bezier(.2,.9,.3,1); }
+    .about-intro h1 { font-size:28px; margin:0 0 8px 0; color:#fff; }
+    .about-intro p { color:#dbe9ff; line-height:1.7; margin:8px 0; }
+    .about-grid { display:grid; grid-template-columns: 1fr 1fr; gap:20px; max-width:1100px; margin:22px auto; }
+    .card { padding:18px; border-radius:12px; background:linear-gradient(135deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); transition:transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s, border-color .28s; will-change:transform, box-shadow; }
+    .card h3 { margin:0 0 8px 0; color:#fff; }
+    .core-list { list-style:none; padding-left:0; color:#dbe9ff; }
+    .core-list li { margin:8px 0; padding-left:14px; position:relative; }
+    .core-list li:before { content:'•'; position:absolute; left:0; color:#7af0c4; }
+    .about-photo:hover { transform:translateY(-4px) scale(1.02); }
+    .card:hover { transform:translateY(-6px) scale(1.01); box-shadow:0 22px 60px rgba(50,110,255,0.12), 0 6px 18px rgba(0,0,0,0.6); border-color:rgba(120,170,255,0.12); }
+
+    .about-bg-anim { animation: aboutDrift 36s linear infinite; }
+    @keyframes aboutDrift {
+      0% { background-position: 0 0, 25px 25px; }
+      50% { background-position: 25px 25px, 0 0; }
+      100% { background-position: 0 0, 25px 25px; }
+    }
+
+    @media (max-width:768px){ .about-hero{flex-direction:column;text-align:center}.about-photo{width:160px;height:160px}.about-grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body class="about-bg-anim">
+  <nav class="navbar">
+    <div class="profile-section">
+      <img src="assest/IMG_20250817_150931.jpg" alt="Krish Bansal" class="profile-avatar">
+      <div class="profile-info"><h3 class="profile-name">Krish Bansal</h3><p class="profile-title">Web Developer</p></div>
+    </div>
+    <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger" aria-hidden="true"></span></button>
+    <ul class="nav-menu" id="primary-navigation">
+      <li><a href="Index.html" class="nav-link">Home</a></li>
+      <li><a href="project.html" class="nav-link">Projects</a></li>
+      <li><a href="skill.html" class="nav-link">Skills</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link contact-btn">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="about-hero">
+      <img src="assest/homepicture.png" alt="Krish Bansal" class="about-photo">
+      <div class="about-intro">
+        <h1>Hi — I'm Krish Bansal</h1>
+        <p>I am a motivated and growth-oriented Web Developer currently pursuing MCA (Integrated) from Raja Balwant Singh Management Technical Campus. I specialize in building practical, real-world web applications that solve business problems efficiently.</p>
+        <p>I have hands-on experience in Full-stack web development, backend service integration, database management (Supabase), and OTP authentication systems (Twilio integration). I've developed projects such as an Online Car Service & Workshop Booking System, a Car & Wheel Customization Platform, and authentication-based admin systems, gaining practical exposure to system design, database structure, user-flow optimization, and secure backend logic.</p>
+        <p>I believe in writing clean, scalable, and maintainable code while focusing on performance and user experience. I'm always aiming to understand the business logic behind features and create efficient digital solutions. Currently, I am continuously improving my skills in advanced backend architecture, automation systems, scalable application design, and I am learning AI/ML.</p>
+      </div>
+    </section>
+
+    <section class="about-grid">
+      <div class="card">
+        <h3>Core Strengths</h3>
+        <ul class="core-list">
+          <li>Strong problem-solving mindset</li>
+          <li>Real project implementation experience</li>
+          <li>Quick learner with execution capability</li>
+          <li>Focus on practical, industry-ready solutions</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>What I Do</h3>
+        <p style="color:#dbe9ff;line-height:1.7;">I build full-stack web applications, integrate backend services, design database schemas (Supabase), and implement secure authentication systems (OTP/Twilio). My focus is delivering production-ready features that solve real problems.</p>
+        <p style="margin-top:12px;color:#dbe9ff;">I am actively seeking opportunities where I can contribute, learn, and grow as a professional developer.</p>
+      </div>
+    </section>
+
+    <section style="max-width:1100px;margin:26px auto;text-align:center;">
+      <a class="cta-button" href="https://wa.me/918869065502" target="_blank">Get In Touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="margin-top:40px;padding-bottom:36px;">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-note">Made with ❤️ • Krish Bansal • © 2026</p>
+      </div>
+      <div class="footer-socials">
+        <a class="social-icon" href="https://github.com/KrishBansalgit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.94 3.29 9.12 7.86 10.59.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.02 11.02 0 0 1 2.9-.39c.99 0 1.99.13 2.92.39 2.2-1.5 3.17-1.18 3.17-1.18.63 1.57.24 2.73.12 3.02.74.81 1.19 1.84 1.19 3.1 0 4.42-2.71 5.39-5.29 5.67.41.35.78 1.04.78 2.09 0 1.51-.01 2.73-.01 3.1 0 .31.21.68.8.56C19.96 20.87 23.25 16.69 23.25 11.75 23.25 5.48 18.27.5 12 .5z"/>
+          </svg>
+        </a>
+        <a class="social-icon" href="https://www.linkedin.com/in/krish-bansal-404711309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"></rect>
+            <path d="M6 9.5V18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="6" cy="6.5" r="1" fill="currentColor" />
+            <path d="M11 12.5v5.5M11 8.5c0 0 0-1.5 2-1.5s2 1.5 2 1.5v-.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
