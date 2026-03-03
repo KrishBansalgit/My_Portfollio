@@ -1,7 +1,7 @@
 const CACHE_NAME = 'krish-portfolio-v1';
 const ASSETS_TO_CACHE = [
   './',
-  'Index.html',
+  'index.html',
   'style.css',
   'script.js',
   'project.html',
