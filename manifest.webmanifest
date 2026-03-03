@@ -1,7 +1,7 @@
 {
   "name": "Krish Bansal Portfolio",
   "short_name": "KrishPortfolio",
-  "start_url": "index.html",
+  "start_url": "/",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
